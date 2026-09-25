@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "dependencies": [
+    {
+      "path": "imports/pmdco-full.owl",
+      "url": "https://raw.githubusercontent.com/materialdigital/core-ontology/43cb22702657af8b1d5cadf58156ede6761ac4ba/pmdco-full.owl",
+      "release": "3.1.1",
+      "retrieval_date": "2026-09-24",
+      "sha256": "23720059af146c92b0468d4e593edf3220d5c65f173006374f5096f7714e4709",
+      "format": "xml",
+      "ontology_iris": [
+        "https://w3id.org/pmd/co/"
+      ],
+      "version_iris": [
+        "https://w3id.org/pmd/co/3.1.1"
+      ],
+      "imports": []
+    },
+    {
+      "path": "imports/prov-o.ttl",
+      "url": "https://www.w3.org/ns/prov-o-20130430.ttl",
+      "release": "2013-04-30",
+      "retrieval_date": "2026-09-24",
+      "sha256": "3d03c8e15753178541fb8cd59fbefecaf1861f9c37ef75190c6e938b85fb0c3d",
+      "format": "turtle",
+      "ontology_iris": [
+        "http://www.w3.org/ns/prov#",
+        "http://www.w3.org/ns/prov-o#"
+      ],
+      "version_iris": [
+        "http://www.w3.org/ns/prov-o-20130430"
+      ],
+      "imports": []
+    },
+    {
+      "path": "imports/prov-to-bfo-bfo.ttl",
+      "url": "https://raw.githubusercontent.com/BFO-Mappings/PROV-to-BFO/067e8863ca83d2e42f61f48624fe9741d48d10a8/prov-bfo-directmappings.ttl",
+      "release": "v2025-01-19",
+      "retrieval_date": "2026-09-24",
+      "sha256": "edacf1c24e2b8f6bf5f8baf50f3983941d9bbfddac86d85f938944b5e2f6e282",
+      "format": "turtle",
+      "ontology_iris": [
+        "https://raw.githubusercontent.com/BFO-Mappings/PROV-to-BFO/main/prov-bfo-directmappings.ttl"
+      ],
+      "version_iris": [
+        "https://raw.githubusercontent.com/BFO-Mappings/PROV-to-BFO/refs/tags/v2025-01-19/prov-bfo-directmappings.ttl"
+      ],
+      "imports": [],
+      "source_sha256": "e8a91f34c74db5118f242c48fec43e3e240be4974c62af67aac92ba55cc1c8f4",
+      "repair": "prov-bfo-syntax-v1",
+      "corrections": [
+        "Replace rdfs:comment: with rdfs:comment",
+        "Declare default prefix as ontology IRI plus # for existing SWRL variables",
+        "Declare xsd prefix for existing xsd:boolean literals"
+      ]
+    },
+    {
+      "path": "imports/prov-to-bfo-ro.ttl",
+      "url": "https://raw.githubusercontent.com/BFO-Mappings/PROV-to-BFO/067e8863ca83d2e42f61f48624fe9741d48d10a8/prov-ro-directmappings.ttl",
+      "release": "v2025-01-19",
+      "retrieval_date": "2026-09-24",
+      "sha256": "a11fb3afbf30fe38446e36649cd3e5a09eee6959c8780394e8812cf9ea2c0eec",
+      "format": "turtle",
+      "ontology_iris": [
+        "https://raw.githubusercontent.com/BFO-Mappings/PROV-to-BFO/main/prov-ro-directmappings.ttl"
+      ],
+      "version_iris": [
+        "https://raw.githubusercontent.com/BFO-Mappings/PROV-to-BFO/refs/tags/v2025-01-19/prov-ro-directmappings.ttl"
+      ],
+      "imports": [
+        "https://raw.githubusercontent.com/BFO-Mappings/PROV-to-BFO/refs/tags/v2025-01-19/prov-bfo-directmappings.ttl"
+      ]
+    }
+  ]
+}

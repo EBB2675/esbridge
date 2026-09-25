@@ -10,6 +10,10 @@ help:
 	@echo "shacl           Run SHACL tests (pending implementation)"
 	@echo "queries         Run competency tests (pending implementation)"
 	@echo "conservativity  Reserved for the external hierarchy comparison"
+	@echo "imports-check  Verify pinned upstream bytes and import closure"
+	@echo "imports-fetch  Restore upstream files from versions.lock"
+	@echo "robot-setup    Download checksum-pinned ROBOT"
+	@echo "compatibility  Run the Task 2 HermiT experiment (requires Java 17)"
 
 setup:
 	$(UV) sync --locked
@@ -32,3 +36,17 @@ queries:
 conservativity:
 	@echo "Not implemented: requires pinned imports and bridge axioms."
 	@exit 1
+
+.PHONY: imports-check imports-fetch robot-setup compatibility
+imports-check:
+	$(UV) run --locked python scripts/dependencies.py check
+
+imports-fetch:
+	$(UV) run --locked python scripts/dependencies.py fetch
+
+robot-setup:
+	$(UV) run --locked python scripts/dependencies.py robot
+
+# JAVA may name a Java 17 executable; otherwise use java from PATH.
+compatibility: imports-check
+	$(UV) run --locked python scripts/check_compatibility.py
