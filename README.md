@@ -20,4 +20,13 @@ RDFLib, pySHACL and pytest are installed. To activate the environment manually:
 source .venv/bin/activate
 ```
 
+## Pinned dependencies
 
+Dependency versions, source URLs and checksums are recorded in
+`imports/versions.lock`. Use `make imports-check` to verify local files and
+`make imports-fetch` to regenerate them from the pinned sources. With Java 17 available, `make robot-setup` and
+`make compatibility` reproduce the separate PMDco/PROV compatibility experiment.
+The BFO mapping is a generated, syntactically corrected dependency. The lock
+records the original download checksum, corrected checksum, and repair steps;
+`make imports-fetch` reproduces it. All other imports are unchanged upstream
+files. Syntax and checksum tests validate the files actually used by HermiT.
